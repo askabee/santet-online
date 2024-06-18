@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Santet Online v2</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+            <nav class="navbar navbar-expand-lg navbar-light bg-zidan">
+               <a class="nav-link special" href="../index.html">ALL YOU CAN ONLINE</a>
+               <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                      <span class="navbar-toggler-icon"></span>
+               </button>
+               <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
+                      <ul class="nav">
+                             <li class="nav-item active">
+                                    <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                             </li>
+                             <li class="nav-item">
+                                    <a class="nav-link" href="../aboutus.html">About us</a>
+                             </li>
+                             <li class="nav-item">
+                                    <a class="nav-link" href="../cek khodam/index.html">Khodam</a>
+                             </li>
+                             <li class="nav-item">
+                                    <a class="nav-link" href="index.html">Santet!</a>
+                             </li>
+                      </ul>
+               </div>
+        </div>
+ </nav>
+    <div class="container">
+        <div class="card">
+            <div class="card-header text-center">
+                <h3>Alat Santet</h3>
+            </div>
+            <div class="card-body">
+                <form id="santetForm">
+                    <div class="form-group">
+                        <label for="namaKorban"><i class="fas fa-user"></i> Nama Korban:</label>
+                        <input type="text" class="form-control" id="namaKorban" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="tanggalLahirKorban"><i class="fas fa-calendar-alt"></i> Tanggal Lahir Korban:</label>
+                        <input type="date" class="form-control" id="tanggalLahirKorban" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="muatanSantet"><i class="fas fa-gift"></i> Muatan Santet:</label>
+                        <select class="form-control" id="muatanSantet" required>
+                            <option value="">--Pilih Muatan Santet--</option>
+                            <option value="Kawat Berduri">Kawat Berduri</option>
+                            <option value="Paku">Paku</option>
+                            <option value="Jarum">Jarum</option>
+                            <option value="Batuk keluar Paku">Batuk keluar Paku</option>
+                            <option value="Pilek keluar Sendok">Pilek keluar Sendok</option>
+                            <option value="Bibir keluar Kawat Berduri">Bibir keluar Kawat Berduri</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn btn-primary btn-block">Kirim Santet</button>
+                </form>
+                <div id="loading" class="text-center mt-3" style="display: none;">
+                    <p>Mohon tunggu... <span id="progress">0</span>%</p>
+                </div>
+                <div id="result" class="alert alert-info text-center mt-3" style="display: none;">
+                    Sedang mengirim santet...
+                </div>
+                <div id="success" class="alert alert-success text-center mt-3" style="display: none;">
+                    Santet terkirim!
+                </div>
+            </div>
+            <div class="card-footer text-center">
+                <small>Santet Online</small>
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/js/all.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
