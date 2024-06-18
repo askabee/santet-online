@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="en">
+       <head>
+              <title>Cek Khodam No Tipu2</title>
+              <meta charset="utf-8">
+              <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+              <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+              <link rel="stylesheet" href="style.css">
+              <link href="https://fonts.googleapis.com/css?family=Poppins:400,600,900&display=swap" rel="stylesheet">
+              <link href="https://fonts.googleapis.com/css?family=Josefin+Sans:400,600,700,700i|Poppins:400,600,900&display=swap" rel="stylesheet">
+              <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.min.css">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-zidan fixed-top">
+        <div class="container">
+                  <a class="nav-link special" href="../index.html">ALL YOU CAN ONLINE</a>
+                  <button class="navbar-toggler d-lg-none" type="button" data-toggle="collapse" data-target="#collapsibleNavId" aria-controls="collapsibleNavId" aria-expanded="false" aria-label="Toggle navigation">
+                         <span class="navbar-toggler-icon"></span>
+                  </button>
+                  <div class="collapse navbar-collapse justify-content-end" id="collapsibleNavId">
+                         <ul class="nav">
+                                <li class="nav-item active">
+                                       <a class="nav-link" href="../index.html">Home <span class="sr-only">(current)</span></a>
+                                </li>
+                                <li class="nav-item">
+                                       <a class="nav-link" href="../aboutus.html">About us</a>
+                                </li>
+                                <li class="nav-item">
+                                       <a class="nav-link" href="index.html">Khodam</a>
+                                </li>
+                                <li class="nav-item">
+                                       <a class="nav-link" href="../santet online/index.html">Santet!</a>
+                                </li>
+                         </ul>
+                  </div>
+           </div>
+    </nav>
+    <div class="container-fluid">
+        <h1>Cek Khodam Online gratis</h1>
+        <p>hanya untuk bercanda</p>
+        <input type="text" id="nameInput" placeholder="Masukkan nama Anda">
+        <button onclick="cekKhodam()">Cek Khodam</button>
+        <button onclick="resetForm()">Reset</button>
+        <div id="result" class="result"></div>
+    </div>
+    <script>
+        function cekKhodam() {
+    const nameInput = document.getElementById('nameInput').value;
+    const result = document.getElementById('result');
+
+    if (nameInput === '') {
+        result.textContent = 'Silakan masukkan nama Anda';
+        return;
+    }
+
+    const animals = [
+        'macan putih', 'elang biru', 'ular hijau', 'harimau emas', 'kuda ungu',
+        'kucing merah', 'anjing pink', 'singa biru', 'serigala hitam', 'buaya kuning',
+        'masako ayam', 'sapi terbang', 'kambing laut', 'bebek ajaib', 'kucing galaksi',
+        'kuda pelangi', 'anjing berkepala dua', 'ular berkaki', 'ikan berkaki', 'burung neon',
+        'gajah mini', 'rusa emas', 'jerapah ungu', 'buaya terbang', 'kucing berkepala tiga',
+        'burung fosfor', 'kambing berkepala dua', 'sapi ungu', 'domba listrik', 'ikan api',
+        'kucing transparan', 'kuda kayu', 'anjing api', 'gajah biru', 'serigala merah muda',
+        'harimau bersayap', 'monyet berkepala singa', 'bebek emas', 'ikan mas robot', 'burung lava'
+    ];
+    const randomAnimal = animals[Math.floor(Math.random() * animals.length)];
+
+    result.textContent = `Khodam Anda adalah: ${randomAnimal}`;
+}
+
+function resetForm() {
+    document.getElementById('nameInput').value = '';
+    document.getElementById('result').textContent = '';
+}
+
+    </script>
+</body>
+</html>
